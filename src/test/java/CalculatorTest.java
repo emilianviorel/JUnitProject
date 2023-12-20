@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -41,7 +42,7 @@ public class CalculatorTest {
         Assertions.assertEquals(result, 2.2);
     }
 
-    @BeforeAll
+    @AfterAll
     public static void afterAllMethod() {
         // Clean up or perform actions after all test methods have executed
         System.out.println("AfterAll");
