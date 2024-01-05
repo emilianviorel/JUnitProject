@@ -7,22 +7,22 @@ public class ConverterMeasureUnits {
     public static final double GALLON = 3.78541;
 
     public double fahrenheitToCelsius(double temperatureInFahrenheit) {
-        double result = CELSIUS_FACTOR * (temperatureInFahrenheit - FAHRENHEIT_BASE);
+        var result = CELSIUS_FACTOR * (temperatureInFahrenheit - FAHRENHEIT_BASE);
         return Double.parseDouble(String.format("%.2f", result));
     }
 
     public double milesToKilometers(double distanceInMiles) {
-        double result = distanceInMiles * MILE;
+        var result = distanceInMiles * MILE;
         return Double.parseDouble(String.format("%.2f", result));
     }
 
     public double poundsToKilograms(double weightInPounds) {
-        double result = weightInPounds * POUND;
+        var result = weightInPounds * POUND;
         return Double.parseDouble(String.format("%.2f", result));
     }
 
     public double gallonsToLiters(double volumeInGallon) {
-        double result = volumeInGallon * GALLON;
+        var result = volumeInGallon * GALLON;
         return Double.parseDouble(String.format("%.2f", result));
     }
 }
