@@ -44,4 +44,8 @@ public class Calculator {
         // Using (double) casting to ensure a double result
         return (double) x / y;
     }
+
+    public int modulo(int x, int y) {
+        return x % y;
+    }
 }

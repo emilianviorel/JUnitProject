@@ -42,6 +42,11 @@ public class CalculatorTest {
         Assertions.assertEquals(result, 2.2);
     }
 
+    @Test
+    public void testModulo() {
+        Assertions.assertEquals(1, calculator.modulo(9, 2));
+    }
+
     @AfterAll
     public static void afterAllMethod() {
         // Clean up or perform actions after all test methods have executed

@@ -1,7 +1,4 @@
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -10,13 +7,13 @@ class ConverterMeasureUnitsTest {
     private static ConverterMeasureUnits converterMeasureUnits;
 
     // Constants for test cases
-    private static final int TEMPERATURE_IN_FAHRENHEIT = 70;
+    private static final int TEMPERATURE_IN_FAHRENHEIT = 35;
     private static final double MILES_TO_KILOMETERS_INPUT = 10.5;
     private static final double POUNDS_TO_KILOGRAMS_INPUT = 10;
     private static final double GALLONS_TO_LITERS_INPUT = 10;
 
     // Expected results for test cases
-    private static final double FAHRENHEIT_TO_CELSIUS_EXPECTED = 21.11;
+    private static final double FAHRENHEIT_TO_CELSIUS_EXPECTED = 1.67;
     private static final double MILES_TO_KILOMETERS_EXPECTED = 16.89;
     private static final double POUNDS_TO_KILOGRAMS_EXPECTED = 4.53;
     private static final double GALLONS_TO_LITERS_EXPECTED = 37.85;
@@ -30,6 +27,11 @@ class ConverterMeasureUnitsTest {
     @BeforeEach
     public void beforeEach() {
         System.out.println("Executing BeforeEach method");
+    }
+
+    @AfterEach
+    public void afterEach() {
+        System.out.println("Executing AfterEach method");
     }
 
     @Test
@@ -56,8 +58,9 @@ class ConverterMeasureUnitsTest {
         assertEquals(GALLONS_TO_LITERS_EXPECTED, liters, DELTA);
     }
 
-    @AfterEach
-    public void afterEach() {
-        System.out.println("Executing AfterEach method");
+    @Disabled("Ignore test")
+    @Test
+    void testMyNewEmptyMethod() {
+
     }
 }
